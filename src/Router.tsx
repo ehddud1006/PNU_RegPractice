@@ -1,9 +1,17 @@
 import { Route, Routes } from 'react-router-dom';
 
-export const PATH = {};
+import MainPage from '@/@page/main/Main';
+
+export const PATH = {
+  MAIN: '/',
+};
 
 const Router = () => {
-  return <Routes />;
+  return (
+    <Routes>
+      <Route path={PATH.MAIN} element={<MainPage />} />
+    </Routes>
+  );
 };
 
 export default Router;
