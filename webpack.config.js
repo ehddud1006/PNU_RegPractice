@@ -17,7 +17,7 @@ module.exports = (env, args) => {
         directory: path.join(__dirname, 'build'),
       },
       compress: true,
-      port: 3000,
+      port: 3003,
       historyApiFallback: true,
       host: 'localhost',
     },
