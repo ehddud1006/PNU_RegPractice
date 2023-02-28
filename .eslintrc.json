@@ -67,7 +67,7 @@
         "next": ["const", "let", "var"]
       }
     ],
-    "quotes": ["error", "single"],
+    "quotes": ["warn", "single"],
     "no-empty-function": "off",
     "no-tabs": ["error", { "allowIndentationTabs": true }],
     "no-multiple-empty-lines": ["error", { "max": 1 }]
