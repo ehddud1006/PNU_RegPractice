@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import Collapse, { Panel } from 'rc-collapse';
+import Collapse from 'rc-collapse';
 
 export const Root = styled.div``;
 
