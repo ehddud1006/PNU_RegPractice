@@ -1,14 +1,17 @@
 import { Route, Routes } from 'react-router-dom';
 
-import MainPage from '@/@page/main/Main';
+import Login from '@/@page/login';
+import MainPage from '@/@page/main';
 
 export const PATH = {
-  MAIN: '/',
+  LOGIN: '/',
+  MAIN: '/main',
 };
 
 const Router = () => {
   return (
     <Routes>
+      <Route path={PATH.LOGIN} element={<Login />} />
       <Route path={PATH.MAIN} element={<MainPage />} />
     </Routes>
   );
