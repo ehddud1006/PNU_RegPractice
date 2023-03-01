@@ -42,9 +42,7 @@ module.exports = (env, args) => {
               ],
               env: {
                 development: {
-                  plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(
-                    Boolean
-                  ),
+                  plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean),
                 },
               },
               plugins: ['@emotion/babel-plugin'],
