@@ -7,20 +7,22 @@ const colors = {
   background_1: '#FAFAF6',
   background_0: '#FDFDFD',
 
-  grey_5: '#4a4c4e',
-  grey_4: '#555',
+  grey_3: '#4a4c4e',
+  grey_2: '#555',
   grey_1: '#F6F6FA',
   grey_0: '#dbdcdc',
 
   blue_5: '#0000FF', // blue
   blue_4: '#014a98',
   blue_3: '#025bb1',
-  blue_2: '#0d84ea',
+  blue_2: '#043d92',
+  blue_1: '#0d84ea',
 
   red_4: '#FF0000', // red
 
   black_4: '#000000',
-  black_2: '#212529',
+  black_3: '#212529',
+  black_2: '#333',
   black_1: '#555',
 } as const;
 
@@ -32,6 +34,7 @@ const colors = {
 // xxl (extra extra large): >=1400px
 
 const screenSize = {
+  xs: '360px',
   sm: '576px',
   md: '768px',
 };

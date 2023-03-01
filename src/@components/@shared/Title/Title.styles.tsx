@@ -22,7 +22,7 @@ export const Title = styled.h1`
   font-size: 25px;
 
   ${({ theme }) => css`
-    color: ${theme.colors.grey_4};
+    color: ${theme.colors.grey_2};
 
     @media (min-width: ${theme.screenSize.sm}) {
       font-size: 28px;

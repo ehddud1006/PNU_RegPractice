@@ -32,7 +32,7 @@ export const BlueBottomDashText = styled(Link)`
 
     background-color: transparent;
 
-    color: ${theme.colors.blue_2};
+    color: ${theme.colors.blue_1};
     font-size: 15px;
   `}
 `;
