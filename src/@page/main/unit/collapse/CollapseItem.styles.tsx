@@ -2,6 +2,8 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Panel } from 'rc-collapse';
 
+import { hideWithA11y } from '@/styles/mixin';
+
 export const CustomPanel = styled(Panel)<{ isPaddingLeft?: boolean; isPadding?: boolean }>`
   .rc-collapse-motion {
     transition: height 0.5s, opacity 0.5s;
@@ -26,7 +28,7 @@ export const CustomPanel = styled(Panel)<{ isPaddingLeft?: boolean; isPadding?: 
     line-height: 36px;
 
     ${({ theme }) => css`
-      color: ${theme.colors.black_2};
+      color: ${theme.colors.black_3};
     `}
   }
 
@@ -111,22 +113,14 @@ export const Table = styled.table`
   border-collapse: collapse;
 
   ${({ theme }) => css`
-    border-top: 2px solid ${theme.colors.grey_5};
+    border-top: 2px solid ${theme.colors.grey_3};
 
     font-size: 14px;
-    color: ${theme.colors.black_2};
+    color: ${theme.colors.black_3};
   `}
 
   caption {
-    //a11y
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    ${hideWithA11y}
   }
 `;
 
