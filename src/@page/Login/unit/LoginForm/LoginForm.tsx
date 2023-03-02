@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { ChangeEventHandler, useState } from 'react';
 
 import Button from '@/@components/@shared/Button/Button';
 import Input from '@/@components/@shared/Input';
@@ -6,34 +6,43 @@ import RadioButtonGroup from '@/@components/@shared/RadioGroup/RadioGroup';
 
 import * as Styled from './Login.styles';
 
+export type Language = {
+  label: string;
+  name: string;
+  value: string;
+};
+
 const LoginForm = () => {
-  const drinks = [
+  const language: Language[] = [
     {
-      label: 'Coffee',
-      name: 'button-types',
+      label: '국문',
+      name: 'korean',
+      value: 'korean',
     },
     {
-      label: 'Tea',
-      name: 'button-types',
+      label: 'English',
+      name: 'english',
+      value: 'english',
     },
   ];
 
-  const [selectedValue, setSelectedValue] = useState(drinks[0].label);
+  const [selectedValue, setSelectedValue] = useState(language[0].value);
 
-  function radioGroupHandler(event: React.ChangeEvent<HTMLInputElement>) {
-    setSelectedValue(event.target.value);
-  }
-
-  useEffect(() => {
-    console.log(selectedValue);
-  }, [selectedValue]);
+  const radioGroupHandler: ChangeEventHandler<HTMLInputElement> = e => {
+    setSelectedValue(e.target.value);
+  };
 
   return (
     <Styled.Root>
       <Styled.InputContainer>
         <Input css={Styled.CustomInput} label='ID' placeholder='학번' />
         <Input css={Styled.CustomInput} label='Password' placeholder='비밀번호' />
-        <RadioButtonGroup label='Select your drink:' options={drinks} onChange={radioGroupHandler} />
+        <RadioButtonGroup
+          label='Language'
+          language={language}
+          selectedValue={selectedValue}
+          onChange={radioGroupHandler}
+        />
       </Styled.InputContainer>
       <Styled.BunttonContainer>
         <Button css={Styled.CustomButton}>로그인</Button>

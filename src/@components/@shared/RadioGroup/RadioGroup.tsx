@@ -1,37 +1,39 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-
 import Input from '@/@components/@shared/Input';
+import type { Language } from '@/@page/Login/unit/LoginForm/LoginForm';
 
-const Fieldset = styled.fieldset`
-  border: none;
-`;
+import * as Styled from './RadioGroup.styles';
 
-const Wrapper = styled.div`
-  padding: 0.5rem;
-`;
+type RadioButtonGroupProps = {
+  label: string;
+  language: Language[];
+  selectedValue: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+};
 
-const RadioButtonGroup = ({ label, options, onChange }: any) => {
-  function renderOptions() {
-    return options.map(({ label, name }: any, index: any) => {
+const RadioButtonGroup = (props: RadioButtonGroupProps) => {
+  const { label, language, selectedValue, onChange } = props;
+
+  const renderLanguage = () => {
+    return language.map(({ label, name, value }: Language) => {
       return (
         <Input.Radio
-          value={label}
+          value={value}
           label={label}
           key={label}
           id={label}
           name={name}
-          defaultChecked={index === 0}
+          checked={value === selectedValue}
           onChange={onChange}
         />
       );
     });
-  }
+  };
 
   return (
-    <Fieldset>
-      <Wrapper>{renderOptions()}</Wrapper>
-    </Fieldset>
+    <Styled.RadioButtonGroupContainer>
+      <label>{label}</label>
+      {renderLanguage()}
+    </Styled.RadioButtonGroupContainer>
   );
 };
 

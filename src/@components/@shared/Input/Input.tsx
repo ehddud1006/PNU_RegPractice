@@ -19,12 +19,12 @@ const Input = (props: InputProps) => {
 };
 
 Input.Radio = function Radio(props: InputProps) {
-  const { label, id = 'test', type = 'radio', className, ...rest } = props;
+  const { label, id, type = 'radio', className, ...rest } = props;
 
   return (
     <Styled.RadioInputContainer>
       <Styled.RadioInput className={className} id={id} type={type} {...rest} />
-      <Styled.RadioInputLabel htmlFor={id}>국문</Styled.RadioInputLabel>
+      <Styled.RadioInputLabel htmlFor={id}>{label}</Styled.RadioInputLabel>
     </Styled.RadioInputContainer>
   );
 };

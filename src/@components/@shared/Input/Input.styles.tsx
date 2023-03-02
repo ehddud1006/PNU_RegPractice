@@ -61,16 +61,9 @@ export const RadioInputContainer = styled.div`
   margin-right: 1rem;
 
   min-height: 1.5rem;
-  padding-left: 1.5rem;
 `;
 
 export const RadioInput = styled.input`
-  /* position: absolute;
-  left: 0;
-  z-index: -1;
-  width: 1rem;
-  height: 1.25rem;
-  opacity: 0; */
   -webkit-appearance: none;
   appearance: none;
   width: 1rem;
