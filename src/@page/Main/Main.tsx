@@ -7,7 +7,7 @@ import Button from '@/@components/@shared/Button/Button';
 import Loading from '@/@components/@shared/Loading';
 import PageTemplate from '@/@components/@shared/PageTemplate';
 import Title from '@/@components/@shared/Title';
-import CollapseItem from '@/@page/main/unit/collapse/CollapseItem';
+import CollapseItem from '@/@page/Main/unit/collapse/CollpaseItem';
 
 import * as Styled from './Main.styles';
 
