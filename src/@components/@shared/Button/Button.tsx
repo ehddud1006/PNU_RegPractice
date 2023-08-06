@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 const Button = styled.button`
   min-height: 38px;
 
-  padding: 8px 20px 7px;
+  padding: 9px 22px 8px;
 
   border-radius: 4px;
 

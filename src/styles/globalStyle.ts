@@ -36,7 +36,8 @@ const globalStyle = css`
   }
 
   ol,
-  ul {
+  ul,
+  li {
     list-style: none;
   }
 

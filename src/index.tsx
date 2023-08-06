@@ -2,6 +2,8 @@ import { Global, ThemeProvider } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import DateTimeProvider from '@/@components/@shared/DateTimeProvider';
+import RegisterDataProvider from '@/@components/@shared/RegisterDataProvider';
 import App from '@/App';
 import globalStyle from '@/styles/globalStyle';
 import theme from '@/styles/theme';
@@ -12,7 +14,11 @@ root.render(
   <React.StrictMode>
     <Global styles={globalStyle} />
     <ThemeProvider theme={theme}>
-      <App />
+      <RegisterDataProvider>
+        <DateTimeProvider>
+          <App />
+        </DateTimeProvider>
+      </RegisterDataProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

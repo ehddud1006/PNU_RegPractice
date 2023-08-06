@@ -22,11 +22,6 @@ const CollapseItem = [
 
           <Styled.Sentence>
             <Text content='- 자동신청 결과는 ' />
-            <Text.RedText content='2023.05.11(목) 09:00 ~ 18:00' />
-            <Text content='에' />
-          </Styled.Sentence>
-
-          <Styled.Sentence>
             <Text.BlueBottomDashText
               content='학생지원시스템 – 수업 – 수강신청및확인 – 자동신청교과목확인및삭제'
               to='https://onestop.pusan.ac.kr/page?menuCD=000000000000340'

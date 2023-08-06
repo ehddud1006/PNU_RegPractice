@@ -5,6 +5,7 @@ import Input from '@/@components/@shared/Input';
 import RadioButtonGroup from '@/@components/@shared/RadioGroup/RadioGroup';
 
 import * as Styled from './Login.styles';
+import { useNavigate } from 'react-router-dom';
 
 export type Language = {
   label: string;
@@ -13,6 +14,8 @@ export type Language = {
 };
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const language: Language[] = [
     {
       label: '국문',
@@ -45,7 +48,9 @@ const LoginForm = () => {
         />
       </Styled.InputContainer>
       <Styled.BunttonContainer>
-        <Button css={Styled.CustomButton}>로그인</Button>
+        <Button css={Styled.CustomButton} onClick={() => navigate('/main')}>
+          로그인
+        </Button>
       </Styled.BunttonContainer>
     </Styled.Root>
   );
