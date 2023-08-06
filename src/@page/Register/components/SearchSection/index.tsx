@@ -1,6 +1,7 @@
-import Button from '@/@components/@shared/Button/Button';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+
+import Button from '@/@components/@shared/Button/Button';
 
 const SearchSection = () => {
   return (

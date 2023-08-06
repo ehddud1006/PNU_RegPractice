@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import type { CSSMotionProps, MotionEventHandler } from 'rc-motion';
 import { useState } from 'react';
 
@@ -8,16 +9,16 @@ import Header from '@/@components/@shared/Header';
 import Loading from '@/@components/@shared/Loading';
 import PageTemplate from '@/@components/@shared/PageTemplate';
 import Title from '@/@components/@shared/Title';
+import useViewport from '@/@hooks/@common/useViewPort';
 import CollapseItem from '@/@page/Main/unit/collapse/CollpaseItem';
 import HeaderDesk from '@/@page/Main/unit/HeaderDesk';
 import Side from '@/@page/Main/unit/Side';
-import * as Styled from './Main.styles';
-import SearchSection from '@/@page/Register/components/SearchSection';
-import styled from '@emotion/styled';
+import Message from '@/@page/Register/components/Message';
 import RegisterSection from '@/@page/Register/components/RegisterSection';
 import ResultSection from '@/@page/Register/components/ResultSection';
-import Message from '@/@page/Register/components/Message';
-import useViewport from '@/@hooks/@common/useViewPort';
+import SearchSection from '@/@page/Register/components/SearchSection';
+
+import * as Styled from './Main.styles';
 
 const getCollapsedHeight: MotionEventHandler = () => ({
   height: 0,
