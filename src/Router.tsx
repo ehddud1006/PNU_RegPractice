@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import Login from '@/@page/Login';
-import MainPage from '@/@page/main';
+import MainPage from '@/@page/Main';
 import Register from '@/@page/Register';
 
 export const PATH = {
